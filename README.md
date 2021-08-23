@@ -1,2 +1,0 @@
-# ReactJs-NETCore-MySQL
- 
