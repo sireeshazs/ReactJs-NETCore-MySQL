@@ -47,7 +47,9 @@ namespace WebApplication1
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             //Enable CORS
-            app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            //app.UseCors(options => options.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            app.UseCors(x => x .AllowAnyMethod() .AllowAnyHeader() .SetIsOriginAllowed(origin => true) // allow any origin .AllowCredentials());
+
 
             if (env.IsDevelopment())
             {
